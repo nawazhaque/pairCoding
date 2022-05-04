@@ -50,19 +50,13 @@ function splitOddAndEven(numbers) {
   //Medium(1)
 
   function vowelChecker(x) {
-    // vowelChecker will grab the first letter 
-    var firstChar = x.toLowerCase().charAt(0);
-
-    // Then check if that first letter is a vowel.
-    if (firstChar === "a" || firstChar === "e" || firstChar === "i" || firstChar === "o" || firstChar === "u") {
-        // If so
-        console.log('This is a vowel.');
+    if ("aeiouAEIOU".indexOf(x) != -1) {
+      return `${x} is a vowel.`;
     } else {
-        // If not
-        console.log('This is not a vowel.');
+      return `${x} is not a vowel.`;
     }
-}
-vowelChecker('r');
+  }
+  console.log(vowelChecker("e"));
 
 //Medium(2)
 
@@ -94,6 +88,8 @@ function gcd_two_numbers(x, y) {
 
 console.log(gcd_two_numbers(28, 14));
 
+// Medium 4
+
 class Car {
   constructor (make, model, year, mileage, color){
     this.make = make;
@@ -103,15 +99,18 @@ class Car {
     this.color = color;   
   }
   drivetoWork() {
-    console.log(`old mileage: ${bmw.mileage} | new mileage: ${bmw.mileage + 33}`)
+    this.mileage += 33;
+    console.log(`old mileage: ${this.mileage - 33} | new mileage: ${this.mileage}`)
   }
 
   driveAroundTheWorld() {
-    console.log(`old mileage: ${bmw.mileage} | new mileage: ${bmw.mileage + 24000}`)
+    this.mileage += 24000;
+    console.log(`old mileage: ${this.mileage - 24000} | new mileage: ${this.mileage}`)
   }
 
   runErrands() {
-    console.log(`old mileage: ${bmw.mileage} | new mileage: ${bmw.mileage + 30}`)
+    this.mileage += 30;
+    console.log(`old mileage: ${this.mileage - 30} | new mileage: ${this.mileage}`)
   }
 }
 
