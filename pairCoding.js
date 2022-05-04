@@ -50,19 +50,13 @@ function splitOddAndEven(numbers) {
   //Medium(1)
 
   function vowelChecker(x) {
-    // vowelChecker will grab the first letter 
-    var firstChar = x.toLowerCase().charAt(0);
-
-    // Then check if that first letter is a vowel.
-    if (firstChar === "a" || firstChar === "e" || firstChar === "i" || firstChar === "o" || firstChar === "u") {
-        // If so
-        console.log('This is a vowel.');
+    if ("aeiouAEIOU".indexOf(x) != -1) {
+      return `${x} is a vowel.`;
     } else {
-        // If not
-        console.log('This is not a vowel.');
+      return `${x} is not a vowel.`;
     }
-}
-vowelChecker('r');
+  }
+  console.log(vowelChecker("e"));
 
 //Medium(2)
 
